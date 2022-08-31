@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빽다방 주문 사이트</title>
+<link rel="stylesheet" href="주문다시.css" type="text/css">
+
+<style>
+    #menu-box{
+    width: 410px;
+    height: 680px;
+    background-color: rgb(252, 225, 70);
+    margin: 0 auto;
+    padding: 20pt;
+}
+
+h1{
+    text-align: center;
+    padding: 30px;
+}
+select{
+    width: 400px;
+    height: 40px;
+    font-size: 12pt;
+}
+.input-box{
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 15pt;
+}
+input[type=number]{
+    width: 400px;
+    height: 30px;
+}
+textarea{
+    font-size: 12pt;
+}
+
+button{
+    width: 400px;
+    height: 40px;
+    font-size: 12pt;
+    background-color:rgb(38, 113, 160);
+    border: 0;
+    border-radius: 3pt;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    color: rgb(38, 113, 160);
+}
+
+</style>
+
+</head>
+<body>
+    <div id="menu-box">
+        <h1>빽다방 메뉴</h1>
+        <div class="input-box">
+            <select>
+                <option value="메뉴를 선택해주세요.">메뉴를 선택해주세요.</option>
+                <option value="완전초코바나나빽스치노">완전초코바나나빽스치노</option>
+                <option value="완전빨기바나나빽스치노">완전빨기바나나빽스치노</option>
+                <option value="원조빽스치노">원조빽스치노</option>
+                <option value="녹차빽스치노">녹차빽스치노</option>
+                <option value="피스타치오빽스치노">피스타치오빽스치노</option>
+            </select>       
+        </div>
+        <div class="input-box">
+            ICED : <input type="radio" name="a" >
+            HOT : <input type="radio" name="a" >
+        </div>
+        <div class="input-box">
+            L size : <input type="radio" name="b" >
+            M size : <input type="radio" name="b" >
+        </div>
+        <div class="input-box">
+            <input type="number" placeholder="수량을 입력해주세요.">
+        </div>
+        <div class="input-box">
+            <textarea name="" id="" cols="48" rows="15" placeholder="추가 사항이 있으면 적어주세요."></textarea>
+        </div>
+        <div class="input-box">
+            <button>주문완료</button>
+        </div>
+    </div>
+</body>
+</html>

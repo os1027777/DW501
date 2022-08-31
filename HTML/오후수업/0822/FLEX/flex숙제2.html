@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;           
+        }
+        .header{
+            background-color: lightcoral;
+            flex-basis: 20%;
+        }
+        .center{
+            background-color: lightgreen;
+            flex-basis: 60%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer{
+            background-color: lightslategray;
+            flex-basis: 20%;
+        }
+        .nav{
+            background-color: lightblue;
+            flex-basis: 15%;
+            border: 1px solid black;
+
+
+        }
+        .section{
+            background-color: lightskyblue;
+            flex-basis: 60%;
+            border: 1px solid black;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+            padding-left: 30px;  
+            padding-right: 30px; 
+
+        }
+        .article{
+            background-color:lightseagreen;
+            flex-basis: 35%;
+            border: 1px solid black;
+            
+        }
+
+        .aside{
+            background-color: lightcyan;
+            flex-basis: 15%;
+            border: 1px solid black;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header영역</div>
+        <div class="center">
+            <div class="nav">nav영역</div>
+            <div class="section">section영역
+                <div class="article">article영역</div>
+                <div class="article">article영역</div>
+            </div>
+            <div class="aside">aside영역</div>
+        </div>
+        <div class="footer">footer영역</div>
+    </div>
+    
+</body>
+</html>

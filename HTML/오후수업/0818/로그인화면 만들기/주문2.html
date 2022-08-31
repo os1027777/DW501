@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문양식</title>
+    <style>
+        .menu-box{
+            height: 600px;
+            width: 400px;
+            background-color: lightgray;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        select{
+            width: 99%;
+            height: 30px;
+        }
+        h2{
+            text-align: center;
+        }
+        input[type=number]{
+            width: 97%;
+            height: 25px;
+        }
+        button{
+            width: 99%;
+            height: 35px;
+            background-color: cornflowerblue;
+            border: 0px;
+            color: white;
+        }
+        .input-box{
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-box">
+        <h2>빽다방 메뉴</h2>
+        <div class="input-box">
+            <select>
+                <option>메뉴를 선택해주세요.</option>
+                <option>앗!!메리카노</option>
+                <option>억!!메리카노</option>
+            </select>
+        </div>
+        <div class="input-box">
+            ICED : <input type="radio" name="a">
+            HOT : <input type="radio" name="a">
+        </div>
+        <div class="input-box">
+            M SIZE : <input type="radio" name="b">
+            L SIZE : <input type="radio" name="b">
+        </div>
+        <div class="input-box">
+            <input type="number">
+        </div>
+        <div class="input-box">
+            <textarea cols="53" rows="10" placeholder="추가사항 있으면 알려주세요!"></textarea>
+        </div>
+        <div class="input-box">
+            <button>주문하기</button>
+        </div>
+    </div>
+    
+</body>
+</html>

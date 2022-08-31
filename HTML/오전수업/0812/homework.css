@@ -1,0 +1,18 @@
+table tr th { 
+    border:1px solid rgb(88, 178, 246);
+    width: 100px;
+    height: 25px; 
+    background-color: rgb(174, 240, 255);
+}
+
+table tr td { 
+    border: 1px solid rgb(185, 169, 23);
+    width:140px;
+    height: 25px;
+    text-align: center;
+
+}
+
+.타이틀 {
+    background-color: rgb(242, 244, 219);
+}

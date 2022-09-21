@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //  루프문 (반복문)
+      // for, while, do~while
+      // while-for
+
+      // 초기값, 조건식, 증감식
+      // 시작숫자, 마지막 숫자,
+      // 시작숫자부터 마지막숫자까지 얼만큼 증가 또는 감소
+
+      // 100번반복 시작 숫자 : 3 증가하는값 :1 마지막숫자 : 102 (1포함해서 계산)
+      // 5번반복 시작 숫자: 25 증가하는값 :3 마지막숫자 : 37
+
+      var i=1;
+      whlie( i < 13){ // i =< 12//
+          document.white ('반복 <br> ')
+          i = i+2;
+      }
+      // 정답 : 12 //
+
+      var sum = 0;
+      var i = 1;
+      while ( i <=10 ) {
+          sum = sum + i;
+          i++;
+      }
+      document.white(sum);
+
+      var sum = 0;
+      var i=1;
+      while(i<=9 ) {
+          document.white('2*'+i+'='+'i*2'+ '<br>')
+      }
+
+      function select_coin(it) {
+        var coin = Math.floor(Math.random()*10)+1;
+        var res = document.querySelector('#result1');
+        switch(coin % 2){
+            case 0:
+                switch(it){
+                    case 'front':
+                        out +="앞면, 정답 <br>";
+                        break;
+                    case 'back':
+                        out+="앞면, 오답 <br>";
+                        break;
+                }
+                break;
+            case 1:
+                switch(it){
+                    case 'front' :
+                        out+="뒷면, 오답 <br>";
+                        break;
+                    case 'back':
+                        out+="뒷면, 정답 <br>";
+                        break;
+                }
+                break;
+
+        }
+        i++;} 
+        res.innerHTML = out;
+
+        if(coin%2 == 0 & it == 'front') res.innerHTML = '앞면, 정답';
+        else if (coim%2 == 1 && it == 'back') res.innerHTML = '뒷면, 정답';
+        else res.innerHTML = '오답이지롱~ 다음에 다시';
+      
+    </script>
+    <script>
+
+    </script>
+  </head>
+  <body> 정말 뭐라는건지 모르겠다! 끝나고 빡공갑니다~! ㅠ^^ㅠ 진짜 머라는건지 모르겠는걸~~~</body>
+</html>

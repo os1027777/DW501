@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제 1회 DW 로또 프로그램</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .lotto {
+        width: 500px;
+        height: 200px;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 로또 번호를 입력하는 ui ( user interface) -->
+    <div class="lotto">
+      <input
+        id="first_number"
+        type="text "
+        placeholder="로또 번호를 입력해주세요..."
+      />
+      <input
+        id="second_number"
+        type="text "
+        placeholder="로또 번호를 입력해주세요..."
+      />
+      <input
+        id="third_number"
+        type="text "
+        placeholder="로또 번호를 입력해주세요..."
+      />
+      <input
+        id="fourth_number"
+        type="text "
+        placeholder="로또 번호를 입력해주세요..."
+      />
+      <input
+        id="fifth_number"
+        type="text "
+        placeholder="로또 번호를 입력해주세요..."
+      />
+      <input
+        id="sixth_number"
+        type="text "
+        placeholder="로또 번호를 입력해주세요..."
+      />
+      <div>
+        <button>입력 완료</button>
+      </div>
+    </div>
+
+    <!-- 결과를 확인하는 ui -->
+    <div class="lotto">
+      <h2>202-09-22 **회차 결과</h2>
+      <h3 id="result">23 8 19 44 1 0</h3>
+      <p id="rank">1등</p>
+    </div>
+  </body>
+  <script>
+    /*
+    1. 기능을 정의한다.
+    ex) 1. 로또 번호를 입력하다(마킹)
+        2. 로또 번호를 검증하다(체크)(중복숫자 체크). 입력한 번호를 검사하다 <- 함수(메소드) 이름을 작성할 때는 동사로 한다.메소드 이름은 길면 길수록 좋다.메소드 이름 처음에 대문자가 아니라 소문자가 온다.
+        3. 로또 결과를 확인하다
+        4. 등수를 확인하다5.당첨금액을 확인한다
+        5. 당첨금액을 확인한다6.
+        6. 추첨을 종료한다.
+        */
+
+    function doCheckLottoNumber() {
+        var first_number = document.getElementById('first_number').value;
+        var second_number = document.getElementById('second_number').value;
+        var third_number = document.getElementById('third_number').value;
+        var fourth_number = document.getElementById('fourth_number').value;
+        var fifth_number = document.getElementById('fifth_number').value;
+        var sixth_number = document.getElementById('sixth_number').value;
+        var isSucess
+    }
+
+    function doCheckInputNumber(number){
+        if(number < 1  || number > 45 ){
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+        function doCheckLottoNumber2(){
+        var lotto = document.getElementById("lotto").children;
+        console.log(lotto);
+        console.log(lotto.length);
+        for(var i=0; i<lotto.length; i++){
+            console.log(lotto[i].localName);
+            if(lotto[i].localName == 'input') {
+                var value = lotto[i].value;
+                console.log(value);
+    
+            }
+        }
+}
+ </script>
+</html>

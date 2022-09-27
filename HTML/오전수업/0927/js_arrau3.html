@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_array.html</title>
+    <script>
+      window.onload = function () {
+        //onload는 브라우저에 출력된 이후를 뜻함 window.load는 브라우저에 모든 html이 출력된 이후
+
+        document.getElementById("docread").addEventListener("change", readfile);
+      };
+      async function readfile(e) {
+        var file = e.target.files[0]; // input 태그에서 선택한 파일 객체
+        if (!file) {
+          //파일객체 존재유무
+          return; //존재하지 않으면 종료
+        }
+        alert(file);
+        var text = await file.text();
+
+        text = text.split("\n");
+        document.write(text[0] + "<br>");
+        document.write(text[1] + "<br>");
+      }
+
+      /* var reader = new FileReader(); // 파일 불러오기
+              reader.onload = function(e){
+                  filedata - e.target.result; // 파일 불러오기
+              };
+            }
+
+            */
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="file" id="docread" />
+    </div>
+  </body>
+</html>

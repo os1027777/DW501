@@ -1,4 +1,8 @@
-/*
+/* 
+
+< 오늘은 함수에 대해 배워봅시당! >
+
+
 함수 vs 메소드  <- 귀속여부 
 함수는 독립적인 코드 vs 메서드는 귀속되어서 사용되는 코드
 
@@ -52,6 +56,114 @@ ex) func1(10,20);
 '모든 코드블럭'에서 사용 가능
 전역변수는 프로그램 종료 시 삭제 
 
+함수간 통신방법(데이터 이동)
+함수는 기본적으로 폐쇄적 구조 형태 -> 함수간 데이터 공유 불가
+함수간 통신을 위한 방법 : 데이터 삽입부와 출력부를 이용하여 통신
+데이터삽입 ( 인수 (파라미터,매개변수) )
+
+sum(10,20,30,40);
+-> 10과 20 데이터를 매개변수 a와 b에 전달
+a=10, b=20 저장 
+
+반환값 : 실행 함수에서 호출 함수로 전달하는 데이터 
+
+function sum( a, b ){
+    return (a + b);
+}
+
+result = sum(23,12);
+변수 result는 35의 값을 가지게 된다.
+
++) return <- 밖으로 내보내는 값 
+   var + 변수(별명)
+   function 다음 var 순으로 적기
+
+*/
+
+/*
+
+var res = total(5, 20); // 원하는 숫자 범위의 총합 구하기
+document.write(res + "<br>");
+var res = total(13, 56);
+document.write(res + "<br>");
+function total(a, b) {
+  var sum = 0;
+  for (var i = a; i <= b; i++) {
+    sum = sum + i;
+  }
+  return sum;
+}
+
+// 함수의 4가지 형태
+// 1. 입력 X, 출력 X
+function func1() {
+  document.write("매개변수 없고 반환도 없다.");
+}
+
+// 2. 입력 O, 출력 X
+function func2(birth) {
+  var age = 2022 - PeresInt(birth.substring(0, 4));
+  document.write("나이는" + age + "살 먹었다.");
+}
+
+// 3. 입력 X, 출력 O
+function func3() {
+  var num = document.querySelector("#number");
+  num == perseInt(num);
+
+  return num + "번 입니다.";
+}
+
+// 4. 입력 O, 출력 O
+function func4(point, multi, state) {
+  if (state > 0) multi = 1;
+
+  return point * multi;
+}
 
 
 */
+
+var number = 0;
+var olnumber = 0;
+var opd = null;
+var result = 0;
+var flag = false;
+
+window.onload = function () {
+  var num = document.querySelectorAll(".num");
+  var op = document.querySelectorAll(".op");
+
+  for (var i = 0; i < num.length; i++) {
+    num[i].addEventListener("click", function () {
+      number = parseInt(this.dataset.value);
+      calc();
+    });
+  }
+  for (var i = 0; i < op.length; i++) {
+    op[i].addEventListener("click", function () {
+      opd = this.dataset.value;
+      flag = true;
+      calc();
+    });
+  }
+};
+
+function calc() {
+  if (flag) {
+    olnumber = number;
+    flag = false;
+    number = 0;
+  }
+  if (olnumber != 0 && number != 0) {
+    selectop();
+    document.querySelector("#result").innerHTML = result;
+  }
+}
+function selectop() {
+  switch (opd) {
+    case "+":
+      result = olnumber + number;
+  }
+  alert(result);
+}

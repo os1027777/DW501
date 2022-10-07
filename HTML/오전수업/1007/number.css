@@ -1,0 +1,18 @@
+#input_wrap {
+  margin-top: 50pt;
+  margin: 0 auto;
+  width: 600px;
+}
+#input_wrap input {
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+}
+#input_wrap button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background: #48d1cc;
+  border: 0;
+  cursor: pointer;
+}

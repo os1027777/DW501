@@ -45,7 +45,18 @@ function table_draw(obj){
 
     var data = tb_list[parseInt(obj.dataset.value)-1];
 
-    draw.innerHTML = data.col+" "+data.row+" "+data.width+" "+data.height;
+    var out = "<table border=1>";
+    for(var i=1; i<=data.col; i++){ //행을 표현
+        out+="<tr>";
+        for(var j=1; j<=data.row; j++){
+            out +="<td width="+data.width+"height="+data.height+"></td>";
+        }
+        out+="</tr>";
+    }
+    out +="</table>";
+
+    draw.innerHTML = out;
+   //  draw.innerHTML = data.col+" "+data.row+" "+data.width+" "+data.height;
 }
 
 function value_save(obj){

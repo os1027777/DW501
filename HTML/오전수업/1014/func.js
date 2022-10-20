@@ -21,3 +21,4 @@ function result(u , c){ //가위바위보 결과
         alert("패배");
     }
 }
+

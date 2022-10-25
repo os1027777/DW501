@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>down.html</title>
+</head>
+<body>
+    <div>
+        <canvas id="draw" width="1000" height="300"
+        style="border:1px solid black">
+        </canvas>
+    </div>
+    <button id="start">녹화시작</button>
+    <button id="stop">녹화종료</button>
+    <div>
+        <video id="recorded" controls style="border: 1px solid black"></video>
+    </div>
+</body>
+</html>
+<script>
+    var canvas= document.getElementById("draw");
+    var start = document.getElementById("start");
+    var stop = document.getElementById("stop");
+    var video = document.getElementById("recorded");
+
+    var mediarecorder = null;
+    var videoData = [];
+
+    start.addEventListener("click",function(){
+        move();
+        // 캔버스 영역 화면을 스트림으로 취득
+        var mediaStream= canvas.captureStream();
+
+        //녹화 객체 생성
+        mediarecorder = new MediaRecorder(mediaStream);
+        MediaRecorder.ondataavailable=function(){
+            videoData.push(this.data);
+        };
+        // stop 이벤트 처리
+        mediaRecorder.onstop=function(){
+            const bl = new Blob(videoDate);
+        };
+        // 캔버스 화면 데이터를 가르키는 임시 주소 생성 
+        const blurl=window.
+    });
+</script>

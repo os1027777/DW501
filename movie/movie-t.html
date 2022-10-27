@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>해외 영화 사이트</title>
+    <title>해외영화 사이트</title>
     <link rel="stylesheet" href="movie.css" />
   </head>
   <body>
@@ -44,37 +44,31 @@
           <input id="movie-id-4" type="hidden" />
         </div>
       </div>
-
       <div class="series-row">
-        <div class="item" data-tilt onclick="getSeriesDetailInfo(this)">
+        <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
           <div id="series-0" class="poster"></div>
           <h4 id="series-title-0" class="title"></h4>
           <p id="series-year-0" class="year"></p>
-          <input id="series-id-0" type="hidden" />
         </div>
-        <div class="item" data-tilt onclick="getSeriesDetailInfo(this)">
+        <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
           <div id="series-1" class="poster"></div>
           <h4 id="series-title-1" class="title"></h4>
           <p id="series-year-1" class="year"></p>
-          <input id="series-id-1" type="hidden" />
         </div>
-        <div class="item" data-tilt onclick="getSeriesDetailInfo(this)">
+        <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
           <div id="series-2" class="poster"></div>
           <h4 id="series-title-2" class="title"></h4>
           <p id="series-year-2" class="year"></p>
-          <input id="series-id-2" type="hidden" />
         </div>
-        <div class="item" data-tilt onclick="getSeriesDetailInfo(this)">
+        <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
           <div id="series-3" class="poster"></div>
           <h4 id="series-title-3" class="title"></h4>
           <p id="series-year-3" class="year"></p>
-          <input id="series-id-3" type="hidden" />
         </div>
-        <div class="item" data-tilt onclick="getSeriesDetailInfo(this)">
+        <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
           <div id="series-4" class="poster"></div>
           <h4 id="series-title-4" class="title"></h4>
           <p id="series-year-4" class="year"></p>
-          <input id="series-id-4" type="hidden" />
         </div>
       </div>
     </div>
@@ -114,15 +108,13 @@
             $('#series-' + i).append(html);
             $('#series-title-' + i).append(response.Search[i].Title);
             $('#series-year-' + i).append(response.Search[i].Year);
-            // input hidden에 영화 고유 아이디 추가하기!
-            $('#series-id-' + i).val(response.Search[i].imdbID);
           }
         },
       });
     }
 
     function initMovie() {
-      var search = 'twilight';
+      var search = 'friends';
       var type = 'movie';
       $.ajax({
         url:
@@ -145,17 +137,18 @@
             $('#movie-' + i).append(html);
             $('#movie-title-' + i).append(response.Search[i].Title);
             $('#movie-year-' + i).append(response.Search[i].Year);
+            //input hidden에 영화 고유 아이디 추가하기!
             $('#movie-id-' + i).val(response.Search[i].imdbID);
           }
         },
       });
     }
 
-    function getMovieDetailInfo(obj){
-      // 클릭한 영화 고유 아이디 콘솔에 출력하기
-      console.log(obj.children[3].value)
+    function getMovieDetailInfo(obj) {
+      //클릭한 영화 고유 아이디 콘솔에 출력하기
+      console.log(obj.children[3].value);
       var movieId = obj.children[3].value;
-      // http://www.omdbapi.com/?apiKey=29e389e4&i=tt1632708&plot=full
+      //http://www.omdbapi.com/?apiKey=764ed67&i=tt0433400&plot=full
       $.ajax({
         url:
           'http://www.omdbapi.com/?apiKey=' +
@@ -168,34 +161,8 @@
         success: function (response) {
           //영화 상세정보 확인!
           console.log(response);
-
         },
       });
-
     }
-
-    function getSeriesDetailInfo(obj){
-      // 클릭한 영화 고유 아이디 콘솔에 출력하기
-      console.log(obj.children[3].value)
-      var movieId = obj.children[3].value;
-      // http://www.omdbapi.com/?apiKey=29e389e4&i=tt1632708&plot=full
-      $.ajax({
-        url:
-          'http://www.omdbapi.com/?apiKey=' +
-          API_KEY +
-          '&i=' +
-          movieId +
-          '&plot=full',
-        type: 'GET',
-        dataType: 'json',
-        success: function (response) {
-          //영화 상세정보 확인!
-          console.log(response);
-
-        },
-      });
-
-    }
-
   </script>
 </html>

@@ -6,10 +6,10 @@ body {
 }
 
 .container {
-  width: 100%;
   height: auto;
   background-color: cornflowerblue;
   margin: 50px auto;
+  padding: 20px;
 }
 
 .title {
@@ -30,9 +30,22 @@ body {
 
 .item {
   flex-basis: 17%;
+  cursor: pointer;
 }
 
 .poster {
   width: 100px;
   height: auto;
+}
+
+.title{
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 22px;
+}
+
+.year{
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-align: center;
 }

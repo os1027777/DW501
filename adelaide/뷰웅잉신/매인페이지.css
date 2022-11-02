@@ -36,16 +36,13 @@ body {
   height: 80px;
   margin: 0 auto;
   width: 1200px;
-  
 }
 
 .ad img {
   height: 80px;
   margin: 0 auto;
   width: 1200px;
-  
 }
-
 
 .name {
   /*하얀색 로고 배경
@@ -84,7 +81,7 @@ body {
 .typee input {
   /*
   인풋 배경색
-  */  
+  */
   height: 25px;
   background-color: rgb(240, 240, 240);
 }
@@ -143,19 +140,19 @@ body {
   justify-content: space-around;
   display: flex;
 }
-.sub_main{
+.sub_main {
   width: 1200px;
   height: 600px;
   margin: 0 auto;
 }
-.img1{
+.img1 {
   width: 1200px;
   height: auto;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
-.imgs{
+.imgs {
   width: 1200px;
   height: 300px;
   display: flex;
@@ -174,4 +171,3 @@ body {
   height: 100%;
   margin: 0 auto;
 }
-

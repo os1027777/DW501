@@ -1,21 +1,17 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: rgb(173, 173, 173);
     box-sizing: border-box;
 }
 
 .header{
-    background-color: rebeccapurple;
+    background-color: rgb(166, 77, 255);
     height: 280px;
 }
-.container{
+.main{
     background-color: red;
     height: 550px;
-}
-.footer{
-    background-color: aqua;
-    height: 139px;
 }
 .ad{
     background-color: yellow;

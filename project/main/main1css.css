@@ -1,0 +1,51 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: rebeccapurple;
+  height: 280px;
+}
+.container {
+  background-color: red;
+  height: 550px;
+}
+.footer {
+  background-color: aqua;
+  height: 139px;
+}
+.ad {
+  background-color: rgb(171, 235, 163);
+  height: 55px;
+}
+.name {
+  height: 175px;
+  background-color: rgb(151, 166, 255);
+}
+.title_bar {
+  background-color: cornsilk;
+  height: 96px;
+  padding-top: 29px;
+}
+/* .typee{
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+} */
+
+.title_bar h3 {
+  text-align: right;
+}
+.list {
+  background-color: pink;
+  height: 56px;
+}
+.list li {
+  float: left;
+  margin-left: 200px;
+  font-size: 25px;
+  margin-top: 10px;
+}
